@@ -5,8 +5,10 @@ import pygame
 class Player(CircleShape):
     def __init__(self, x, y):
         super().__init__(x, y, constants.PLAYER_RADIUS)
-    
     rotation = 0
+    
+    
+    #self.rect = self.image.get_rect(center=(x, y))
     
     
         # in the Player class
@@ -19,6 +21,14 @@ class Player(CircleShape):
         return [a, b, c]
 
     def draw(self, screen):
-        triangle = self.triangle()
-        pygame.draw.polygon(screen, "white", triangle, width=constants.LINE_WIDTH)
+        #triangle = self.triangle()
+        #pygame.draw.polygon(screen, "white", triangle, width=constants.LINE_WIDTH)
+        
+        spaceship = pygame.image.load("galaga.PNG")
+        spaceship = pygame.transform.scale(spaceship, (60, 60))
+        screen.blit(spaceship, (constants.SCREEN_WIDTH / 2, constants.SCREEN_HEIGHT / 2))
+        
+        
+        
+        
         
