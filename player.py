@@ -21,9 +21,11 @@ class Player(CircleShape):
         return [a, b, c]
 
     def draw(self, screen):
+        #white triangle ship
         #triangle = self.triangle()
         #pygame.draw.polygon(screen, "white", triangle, width=constants.LINE_WIDTH)
         
+        #galaga ship
         spaceship = pygame.image.load("galaga.PNG")
         spaceship = pygame.transform.scale(spaceship, (60, 60))
         screen.blit(spaceship, (constants.SCREEN_WIDTH / 2, constants.SCREEN_HEIGHT / 2))
